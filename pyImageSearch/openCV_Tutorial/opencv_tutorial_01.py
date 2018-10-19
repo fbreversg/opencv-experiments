@@ -68,3 +68,16 @@ rotated = imutils.rotate_bound(image, 45)
 cv2.imshow("Imutils Bound Rotation", rotated)
 cv2.waitKey(0)
 
+# apply a Gaussian blur with a 11x11 kernel to the image to smooth it,
+# useful when reducing high frequency noise
+""" cv2.GaussianBlur(src, ksize, sigmaX[, dst[, sigmaY[, borderType]]])kSize es  """
+blurred = cv2.GaussianBlur(image, (11, 11), 0)
+cv2.imshow("Blurred", blurred)
+cv2.waitKey(0)
+
+# draw a 2px thick red rectangle surrounding the face
+output = image.copy()
+cv2.rectangle(output, (320, 60), (420, 160), (0, 0, 255), 2)
+cv2.imshow("Rectangle", output)
+cv2.waitKey(0)
+
