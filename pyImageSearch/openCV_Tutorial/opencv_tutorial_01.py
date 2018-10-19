@@ -20,3 +20,9 @@ print("R={}, G={}, B={}".format(R, G, B))
 cv2.imshow("Image", image)
 cv2.waitKey(0)
 
+# extract a 100x100 pixel square ROI (Region of Interest) from the input image
+# # image[startY:endY, startX:endX]
+roi = image[144:500, 200:650]
+cv2.imshow("ROI", roi)
+cv2.waitKey(0)
+
