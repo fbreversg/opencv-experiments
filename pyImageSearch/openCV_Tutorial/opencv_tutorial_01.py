@@ -44,3 +44,27 @@ cv2.waitKey(0)
 resized = imutils.resize(image, width=300)
 cv2.imshow("Imutils Resize", resized)
 cv2.waitKey(0)
+
+# let's rotate an image 45 degrees clockwise using OpenCV by first
+# computing the image center, then constructing the rotation matrix,
+# and then finally applying the affine warp
+center = (w // 2, h // 2)
+""" cv2.getRotationMatrix2D(center, angle, scale) """
+M = cv2.getRotationMatrix2D(center, -45, 1.0)
+""" cv2.warpAffine(src, M, dsize[, dst[, flags[, borderMode[, borderValue]]]]) """
+rotated = cv2.warpAffine(image, M, (w, h))
+cv2.imshow("OpenCV Rotation", rotated)
+cv2.waitKey(0)
+
+# rotation can also be easily accomplished via imutils with less code
+rotated = imutils.rotate(image, -45)
+cv2.imshow("Imutils Rotation", rotated)
+cv2.waitKey(0)
+
+# OpenCV doesn't "care" if our rotated image is clipped after rotation
+# so we can instead use another imutils convenience function to help
+# us out
+rotated = imutils.rotate_bound(image, 45)
+cv2.imshow("Imutils Bound Rotation", rotated)
+cv2.waitKey(0)
+
