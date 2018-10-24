@@ -1,5 +1,20 @@
 """ Ejemplos de transformacion con opencv """
 
+"""
+
+cv2.imread(image)
+cv2.imshow(title, image)
+cv2.resize(image, (height, width)
+cv2.getRotationMatrix2D(center, angle, scale)
+cv2.warpAffine(image, M, (w, h))
+cv2.GaussianBlur(image, (k, k), 0) - (k, k) = kernel ej (11,11)
+cv.Rectangle(img, pt1, pt2, color, thickness=1, lineType=8, shift=0)
+cv.Circle(img, center, radius, color, thickness=1, lineType=8, shift=0)
+cv.Line(img, pt1, pt2, color, thickness=1, lineType=8, shift=0)
+cv.PutText(img, text, org, font, color)
+
+"""
+
 import imutils
 import cv2
 
