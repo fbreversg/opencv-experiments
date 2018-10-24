@@ -8,10 +8,10 @@ cv2.resize(image, (height, width)
 cv2.getRotationMatrix2D(center, angle, scale)
 cv2.warpAffine(image, M, (w, h))
 cv2.GaussianBlur(image, (k, k), 0) - (k, k) = kernel ej (11,11)
-cv.Rectangle(img, pt1, pt2, color, thickness=1, lineType=8, shift=0)
-cv.Circle(img, center, radius, color, thickness=1, lineType=8, shift=0)
-cv.Line(img, pt1, pt2, color, thickness=1, lineType=8, shift=0)
-cv.PutText(img, text, org, font, color)
+cv2.rectangle(img, pt1, pt2, color[, thickness[, lineType[, shift]]])
+cv2.circle(img, center, radius, color[, thickness[, lineType[, shift]]])
+cv2.line(img, pt1, pt2, color[, thickness[, lineType[, shift]]]) 
+cv2.putText(img, text, org, fontFace, fontScale, color[, thickness[, lineType[, bottomLeftOrigin]]])
 
 """
 
